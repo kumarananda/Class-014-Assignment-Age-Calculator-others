@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+    <!-- 001 Order Counter Start -->
+    <section class="fiver-timeline w-50 mx-auto mt-5 p-5 bg-light">
+        <h3>Order Counter</h3>
+        <div class="fiver-wraper">
+            <div class="card">
+                <div class="card-body">
+                    <form class="form-inline fiver-wraper-flex" id="fiver_order">
+                        <div class="form-group">
+                            <input id="fiverdate" type="date" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input id="fiverTime" type="time" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input id="fOrder" type="submit" class="btn btn-primary" value="creat an order">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- <hr> -->
+            <div class="counter">
+                <!-- <span id="day">DD</span>
+                <span id="hour">HH</span>
+                <span id="min">MM</span>
+                <span id="sec">SS</span> -->
+            </div>
+            <div class="countCom"></div>
+        </div>
+    </section>
+    <!-- 001 Order Counter end -->
+
+    <!-- 002 Bsic ToDo Start -->
+    <section class="do-timeline w-50 mx-auto mt-5 p-5 bg-light">
+        <h3>Basic ToDo App</h3>
+        <div class="do-wraper wrap">
+            <div class="card">
+                <div class="card-body">
+                    <form class="form-inline do-wraper-flex" id="do_form">
+                        <div class="form-group">
+                            <input name="do-name" type="text" class="form-control" placeholder="Do name">
+                        </div>
+                        <div class="form-group">
+                        <select name="opt" id="" class="form-control">
+                            <option value="">--select--</option>
+                            <option value="Importent">Importent</option>
+                            <option value="Not importent">Not importent</option>
+                            <option value="Unnecessary">Unnecessary</option>
+                        </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Add">
+                        </div>
+                    </form>
+                    <hr>
+                    <ul id="list_group" class="list_group">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 002 Bsic ToDo End -->
+
+
+
+
+    <!-- 003 Age Calculator Start -->
+    <section class="ageCalSection  mx-auto mt-5 p-5 bg-light text-center">
+        <h3 >Age Calculator </h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 shadow p-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Check Your Age</h4>
+                        </div>
+                        <div class="card-body">
+                            <form id="ageSubmit" action="">
+                                <div class="form-group">
+                                    <label for="ageName">Your Name:</label>
+                                    <input type="text" class="form-control" placeholder="Enter Name" id="ageName">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ageBirthDate">Your Birth Date:</label>
+                                    <input id="ageBirthDate" type="date" class="form-control" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="ageCurrentDate">Calculate from:</label>
+                                    <input id="ageCurrentDate" type="date" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input  type="submit" class="btn btn-primary" value="Calculate">
+                                </div>
+                            </form>
+                        </div>
+                        <div id="ageInputMess" class="card-footer bg-primary">
+                            <span class="">Welcome</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div id="ageResult" class="card bg-secondary">
+
+                        <div class="card-body bg-info">
+                            <h2 class="card-title">Your result will publish here</h2>
+                        </div>
+
+                        <!-- <div class="card-body bg-info">
+                            <h2 class="card-title">Hi ${} Your Result on progress.....</h2>
+                        </div> -->
+
+
+                        <!-- <div class="card-header">
+                            <h4 >Hi #Name</h4>
+                            
+                        </div>
+                        <div class="card-body">
+                            <span>Your Age Details is bellow</span>
+                            <h3 class="card-title">Your date of Birth is #BrithDate</h3>
+                            <span class="d-block mt-2">Age:</span>
+                            <span class="d-block mt-2">${}21 years ${}9 months ${}2 days</span>
+                            <span class="d-block mt-2">or ${}261 months ${}2 days</span>
+                            <span class="d-block mt-2">or ${}1135 weeks ${}2 days</span>
+                            <span class="d-block mt-2">or ${}7,947 days</span>
+                            <span class="d-block mt-2">or ${}190,728 hours</span>
+                            <span class="d-block mt-2">or ${}11,443,680 minutes</span>
+                            <span class="d-block mt-2">or ${}686,620,800 seconds</span>
+                        </div>
+                        <div class="card-footer agewelMess">
+                            <span>#Name, Thanks for using our App</span>
+                        </div> -->
+                    </div>
+                    
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- 003 Age Calculator End -->
+
+    
+    <script src="function.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+
+
+/* 001 Order Counter Start  */
+
+/* 001 Order Counter End  */
+
+ /* 002 Bsic ToDo Start  */
+ .wrap{
+    width: 600px;
+    margin: 50px auto;
+}
+/* .do-timeline{
+
+}; */
+
+/* .doflex:last-child{
+    display: flex;
+    justify-content: space-between;
+} */
+/* .do-wraper{
+
+} */
+/* li{
+    display: flex;
+    justify-content: space-between;
+} */
+.list-group-item {
+	display: flex !important;
+	justify-content: space-between !important;
+    
+}
+ /* 002 Bsic ToDo End  */
