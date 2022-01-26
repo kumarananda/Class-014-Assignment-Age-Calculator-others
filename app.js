@@ -136,9 +136,7 @@ do_form.addEventListener('submit', function(e) {
 
 // 003 Age Calculator start
 
-const ageName = document.getElementById('ageName').value;
-const ageBirthDate = document.getElementById('ageBirthDate').value;
-const ageCurrentDate = document.getElementById('ageCurrentDate').value;
+
 
 const ageSubmit = document.getElementById('ageSubmit');
 const ageResult = document.getElementById('ageResult');
@@ -159,20 +157,22 @@ ageNamegg.addEventListener('blur', () => {
 ageSubmit.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    if(ageName == "" || ageBirthDate == "" || ageCurrentDate == ""){
-        ageInputMess.innerHTML = `
-        <span class="bg-warning text-white ">All data required</span>
-        `;
+
+    const ageName = document.getElementById('ageName').value;
+    const ageBirthDate = document.getElementById('ageBirthDate').value;
+    const ageCurrentDate = document.getElementById('ageCurrentDate').value;
+
+    if(ageName == '' || ageBirthDate == '' || ageCurrentDate == ''){
         ageResult.innerHTML = `
-        <div class="card-body  mt-5">
-        <h2 class="card-title">Hay, Please input all data</h2>
+        <div class="card-body bg-info">
+        <h2 class="card-title text-danger">All data is not Correct</h2>
         </div>
-        
         `;
-        // ageInputMess.classList = "bg-warning";
-        
 
     }else{
+
+    
+        
         
         let ageBirth = new Date(ageBirthDate).getTime();
         let ageCalDate = new Date(ageCurrentDate).getTime();
@@ -204,7 +204,7 @@ ageSubmit.addEventListener('submit', function (e) {
         let extdayforWeak = Math.floor( extDayCal - ( extweakCal * 7 )   );
 
 
-        
+            
         console.log(extdayforWeak);
 
         ageResult.innerHTML = `
@@ -213,7 +213,7 @@ ageSubmit.addEventListener('submit', function (e) {
             </div>
         `;
 
-        let ageCalResult = setTimeout( () => {
+        setTimeout( () => {
             ageResult.innerHTML = `
             <div class="card-header bg-primary text-white">
             <h4 >Hi ${ageName}</h4>
@@ -238,18 +238,9 @@ ageSubmit.addEventListener('submit', function (e) {
             
 
         },2000);
-        // ageName.value = "" ;
-        // ageBirthDate.value = "" ;
-        // ageCurrentDate.value = "" ;
 
-
-        
     }
-
-    
-    // console.log(years + " " + ageNetmonths + " " + ageNetdays +
-    //  " " + ageNethours + " " + ageNetminutes + " " + ageNetseconds );
-    //  console.log(fullmonths);
+            
 
 
     
